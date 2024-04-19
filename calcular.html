@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>DOM</title>
+</head>
+<body>
+
+    <main>
+        <section class="calculadora">
+            <div class="container">
+                <h1>Calculadora</h1>
+    
+                <div class="container-cal">
+                    <h2>Soma</h2>
+                    <input type="number" id="n1"> +
+                    <input type="number" id="n2">
+                    <button onclick="soma()">=</button>
+                    <input type="number" id="n2">
+                    <p>O resutado é: <span id="r"></span></p>
+                </div>
+    
+                <div class="container-cal">
+                    <h2>Subtração</h2>
+                        <input type="number" id="n3"> -
+                        <input type="number" id="n4">
+                        <button onclick="sub()">=</button>
+                        <input type="number" id="n4">
+                        <p>O resutado é: <span id="resultadoSub"></span></p>
+                </div>
+        
+                <div class="container-cal">
+                    <h2>Multiplicação</h2>
+                        <input type="number" id="n5"> x
+                        <input type="number" id="n6">
+                        <button onclick="mult()">=</button>
+                        <input type="number" id="n6">
+                        <p>O resutado é: <span id="resultadoMult"></span></p>
+                </div>
+                
+                <div class="container-cal">
+                    <h2>Divisão</h2>
+                        <input type="number" id="n5"> /
+                        <input type="number" id="n6">
+                        <button onclick="div()">=</button>
+                        <input type="number" id="n6">
+                        <p>O resutado é: <span id="resultadoDiv"></span></p>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+
+    <script src="./js/interacaoDOM.js"></script>
+</body>
+</html>
