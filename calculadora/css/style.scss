@@ -24,18 +24,30 @@ section{
             h2{
                 font-size: 1rem;
             }
-            input{
-                height: 50px;
-                width: 50px;
-                background-color: #efefef;
-                border: none;
-                border-bottom: 1px solid;
+            .operacao{
+                display: flex;
+                gap: 0.6rem;
+                align-items: center;
+                input{
+                    height: 50px;
+                    width: 50px;
+                    background-color: #efefef;
+                    border: none;
+                    border-bottom: 1px solid;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                div{
+                    @extend input;
+                }
+                button{
+                    background-color: #2b2b2b;
+                    color: #ffff;
+                }
+
             }
-            button{
-                background-color: #2b2b2b;
-                color: #ffff;
-            }
+          
         }
-    }
-    
+    } 
 }

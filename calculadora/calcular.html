@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>DOM</title>
 </head>
 <body>
@@ -15,38 +15,42 @@
     
                 <div class="container-cal">
                     <h2>Soma</h2>
-                    <input type="number" id="n1"> +
-                    <input type="number" id="n2">
-                    <button onclick="soma()">=</button>
-                    <input type="number" id="n2">
-                    <p>O resutado é: <span id="r"></span></p>
+                    <div class="operacao">
+                        <input type="number" id="n1"> +
+                        <input type="number" id="n2">
+                        <button onclick="soma()">=</button>
+                        <div id="r"></div>
+                    </div>
                 </div>
     
                 <div class="container-cal">
                     <h2>Subtração</h2>
+                    <div class="operacao">
                         <input type="number" id="n3"> -
                         <input type="number" id="n4">
                         <button onclick="sub()">=</button>
-                        <input type="number" id="n4">
-                        <p>O resutado é: <span id="resultadoSub"></span></p>
+                        <div id="resultadoSub"></div>
+                    </div>
                 </div>
         
                 <div class="container-cal">
                     <h2>Multiplicação</h2>
+                    <div class="operacao">
                         <input type="number" id="n5"> x
                         <input type="number" id="n6">
                         <button onclick="mult()">=</button>
-                        <input type="number" id="n6">
-                        <p>O resutado é: <span id="resultadoMult"></span></p>
+                        <div id="resultadoMult"></div>
+                    </div>
                 </div>
                 
                 <div class="container-cal">
                     <h2>Divisão</h2>
+                    <div class="operacao">
                         <input type="number" id="n5"> /
                         <input type="number" id="n6">
                         <button onclick="div()">=</button>
-                        <input type="number" id="n6">
-                        <p>O resutado é: <span id="resultadoDiv"></span></p>
+                        <div id="resultadoDiv"></div>
+                    </div>
                 </div>
 
             </div>
@@ -55,6 +59,6 @@
     </main>
 
 
-    <script src="../js/interacaoDOM.js"></script>
+    <script src="interacaoDOM.js"></script>
 </body>
 </html>
