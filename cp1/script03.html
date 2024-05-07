@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,47 +13,71 @@
     function imc(){
       let arrayPeso = []
       let arrayAltura = []
-
+      let result = []
+      let contaIMC 
+      
       let peso
       let altura
-      let contaImc
-
-      for (let i = 0; i < 5; i++) {
+      
+      for (let i = 0; i < 2; i++) {
         peso = Number(prompt("Digite seu peso em kg"))
         altura = Number(prompt("Digite sua altura em metros"))
-        contaImc = peso / altura * altura
 
-        console.log(contaImc)
+        
+        // for (let index = 0; index < 2; index++) {
+        //   let contaImc = peso / altura*altura
+        //   console.log(contaImc)
+        // }
 
-        arrayPeso.push(contaImc)
+        // if(contaImc > 11){
+        //   console.log('Peso alto')
+        //   result.push(contaImc)
+        //   console.log(contaImc)
+        // } else if(peso < 10){
+        //   console.log('peso baixo')
+        //   result.push(peso)
+        // } else {
+        //   print('n sei')
+        //   result.push(peso)
+        // }
+
+        arrayPeso.push(peso)
         arrayAltura.push(altura)
       }
-
-      console.log(arrayPeso)
-      console.log(arrayAltura)
       
 
+      for (let i = 0; i < arrayAltura; i++) {
+          console.log(arrayAltura)
+          
+        }
 
-/*
+
+
+      // for (let i = 0; i < arrayPeso; i++){
+      //   contaImc = arrayPeso / arrayAltura * arrayAltura
+      //   console.log(contaImc)
+      // }
+
+
+
+    }
+    
+    imc()
+
+    
+
+  /*
       for (let i = 0; i < arrayPeso.length; i++){
     
         console.log(contaImc)
       }
 
-
       console.log(arrayPeso)
       console.log(arrayAltura)
-      
 
-      
    */
 
-      
-      
 
-    }
-    
-    imc()
   </script>
 </body>
 </html>
