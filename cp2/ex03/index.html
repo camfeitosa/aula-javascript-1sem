@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Votação</title>
+</head>
+<body>
+  <main>
+    <section>
+      <h1>Votação 2024</h1>
+      <div class="container">
+        <div class="canditados">
+          <ul>
+            <li>
+              Canditado 1
+              <div class="votar">
+                <button onclick="candidatoUm()">Votar</button>
+                <div id="c1"> - </div>
+              </div>
+            </li>
+            <li>Canditado 2
+              <div class="votar">
+                <button onclick="candidatoDois()">Votar</button>
+                <div id="c2"> - </div>
+              </div>
+            </li>
+            <li>Canditado 3
+              <div class="votar">
+                <button onclick="candidatoTres()">Votar</button>
+                <div id="c3"> - </div>
+              </div>
+            </li>
+            <li>Canditado 4
+              <div class="votar">
+                <button onclick="candidatoQuatro()">Votar</button>
+                <div id="c4"> - </div>
+              </div>
+            </li>
+            <li>Canditado 5
+              <div class="votar">
+                <button onclick="candidatoCinco()">Votar</button>
+                <div id="c5"> - </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <button class="btn-fim" onclick="encerrar()">Encerrar simulação</button>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="./script03.js"></script>
+</body>
+</html>
