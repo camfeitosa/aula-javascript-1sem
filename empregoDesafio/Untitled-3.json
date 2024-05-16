@@ -1,0 +1,20 @@
+{
+  "name": "js_first_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ts-mocha test/*.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "@types/mocha": "^7.0.1",
+    "@types/node": "^13.7.4",
+    "mocha": "^7.0.1",
+    "ts-mocha": "^6.0.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.2"
+  }
+}
