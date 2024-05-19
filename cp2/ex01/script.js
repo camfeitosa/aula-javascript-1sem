@@ -1,61 +1,90 @@
-function somar(a, b) {
-  return a + b;
+
+function soma(num1, num2) {
+  return num1 + num2;
 }
 
-function subtrair(a, b) {
-  return a - b;
+function sub(num1, num2) {
+  return num1 - num2;
 }
 
-function multiplicar(a, b) {
-  return a * b;
+function mult(num1, num2) {
+  return num1 * num2;
 }
 
-function divisao(a, b){
-  if (b == 0){
-      return "Não é possível dividir"
+function div(num1, num2) {
+  if (num2 === 0) {
+    return "Erro: Divisão por zero!";
   }
-  return a / b
+  return num1 / num2;
 }
 
 function calculadora() {
-  const operacao = prompt("Escolha uma operação: \n1: Soma (+)\n2: Subtração (-)\n3: Multiplicação (*)\n4: Divisão (/)");
+  const botoes = document.getElementsByClassName("operacao");
 
-  const num1 = Number(prompt("Informe o primeiro número:"));
-  const num2 = Number(prompt("Informe o segundo número:"));
+  for (let index = 0; index < botoes.length; index++) {
+    const botao = botoes[index];
+    botao.addEventListener('click', function () {
+      const num1 = Number(document.getElementById("num1").value);
+      const num2 = Number(document.getElementById("num2").value);
+      var resultado;
 
-  let resultado;
-
-  switch (operacao) {
-    case '1':
-      resultado = somar(num1, num2);
-      console.log(`Resultado da soma: ${resultado}`);
-      break;
-    case '2':
-      resultado = subtrair(num1, num2);
-      console.log(`Resultado da subtração: ${resultado}`);
-      break;
-    case '3':
-      resultado = multiplicar(num1, num2);
-      console.log(`Resultado da multiplicação: ${resultado}`);
-      break;
-    case '4':
-      resultado = dividir(num1, num2);
-      if (resultado !== null) {
-        console.log(`Resultado da divisão: ${resultado}`);
+      switch (botao.id) {
+        case "btnSoma":
+          resultado = soma(num1, num2);
+          break;
+        case "btnSub":
+          resultado = sub(num1, num2);
+          break;
+        case "btnMult":
+          resultado = mult(num1, num2);
+          break;
+        default:
+          resultado = div(num1, num2);
+          break;
       }
-      break;
-    default:
-      console.log("Operação inválida!");
+      window.alert(`O resultado é: ${resultado}`);
+      if (!confirm("Deseja continuar a fazer cálculos?")) {
+        document.getElementById("r").innerHTML = ""
+      }
+    });
   }
 }
 
-while (true) {
-  calculadora();
-  const continuar = prompt("Deseja realizar outra operação? (s/n)").toLowerCase();
-  if (continuar !== 's') {
-    console.log("Encerrando a calculadora.");
-    break;
-  }
+function show() {
+  const r = document.getElementById("r");
+  r.innerHTML = `    <div>
+      <h1>Calculadora</h1>
+      <h4>Insira os numeros e escolha a operação</h4>
+      <input type="text" id="num1" />
+      <input type="text" id="num2" />
+      <div>
+        <button
+          id="btnSoma"
+          class="operacao"
+        >
+          +
+        </button>
+        <button
+          id="btnSub"
+          class="operacao"
+        >
+          -
+        </button>
+        <button
+          id="btnMult"
+          class="operacao"
+        >
+          *
+        </button>
+        <button
+          id="btnDiv"
+          class="operacao"
+        >
+          /
+        </button>
+      </div>
+    </div>`;
+  calculadora()
 }
 
-calculadora()
+window.onload = show  
